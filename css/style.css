@@ -1445,12 +1445,12 @@ input#submit:hover {
 
 header #navbar {
   width: 100%;
-  background: #f49b00; }
+  background: #f0f400; }
 
 .navbar-default a.navbar-brand {
   font-size: 24px;
   position: relative;
-  color: #f49b00;
+  color: #f0f400;
   letter-spacing: 2px;
   font-weight: 400;
   display: block;
@@ -1463,13 +1463,13 @@ header #navbar {
   margin-right: 0;
   flex: 1; }
   .navbar-default a.navbar-brand span {
-    color: #fc883a; }
+    color: #f0f400; }
   .navbar-default a.navbar-brand:hover {
-    color: #D60D45; }
+    color: #f0f400; }
 .navbar-default .navbar-nav li, .navbar-default .navbar-nav li.active {
-  background: #f33807; }
+  background: #f0f400; }
   .navbar-default .navbar-nav li a, .navbar-default .navbar-nav li a:hover, .navbar-default .navbar-nav li.active a, .navbar-default .navbar-nav li.active a:hover {
-    background: #f33807; }
+    background: #f0f400; }
 
 /* Main Menu Dropdown */
 .navbar-nav li {
