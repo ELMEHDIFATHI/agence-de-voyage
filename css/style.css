@@ -24,6 +24,41 @@ footer {
   margin: 0;
   padding: 0; }
 
+  
+.Opinions h1 {
+  text-align: center;
+}
+.Opinions .row {
+  margin-top: 25px;
+}
+.Opinions .col-lg-4 {
+  display: flex;
+  margin:25px 0;
+  gap: 20px;
+}
+.Opinions .col-lg-4 .img {
+  border-radius: 50%;
+}
+.Opinions .col-lg-4 .disc {
+  width: calc(100%-75px);
+}
+.Opinions .col-lg-4 .disc p {
+  font-size: 13px;
+  margin: 0px 0 10px 0;
+}
+.Opinions .col-lg-4 .img img {
+  width: 75px;
+  border: 7.5px solid  rgba(152, 163, 1, 0.7);;
+
+  border-radius: 50%;
+}
+.Opinions .col-lg-4 .learnmore {
+  color: rgba(152, 163, 1, 0.7);;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+
 body {
   margin: 0;
   padding: 0;
