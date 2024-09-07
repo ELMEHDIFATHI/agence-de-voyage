@@ -5789,7 +5789,7 @@ ul.sidebar-tags li {
 }
 
 .theme {
-  color: #000000 !important;
+  color: #fdc703 !important;
   font-family: 'Palanquin Dark', sans-serif;
   font-weight: bolder;
   margin-bottom: 20px !important;
@@ -6013,3 +6013,4 @@ body .form-group {
   width: 150px; /* Set the desired width */
   height: auto; /* Maintain aspect ratio */
 }
+
