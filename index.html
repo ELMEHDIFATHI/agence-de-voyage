@@ -22,11 +22,7 @@
     <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
-    <link rel="stylesheet" href="fonts/line-icons.css" type="text/css">
-
-
-
-    
+    <link rel="stylesheet" href="fonts/line-icons.css" type="text/css">  
 </head>
 <body>
 
@@ -510,9 +506,9 @@ Grâce à nos expériences cumulées et à la diversité de notre équipe, nous 
                         <h3 class="white">Newsletter</h3>
                         <div class="newsletter-form">
                             <p class="mb-3">Pour plus d'informations, contactez-nous..</p>
-                            <form action="#" method="get" accept-charset="utf-8" class="border-0 d-flex align-items-center">
-                                <input type="text" placeholder="Adresse E-mail">
-                                <button class="nir-btn ms-2">Souscrire</button>
+                            <form name="contactform2" id="contactform2"  class="border-0 d-flex align-items-center">
+                                <input type="text" name="email" placeholder="email">
+                                <button class="nir-btn ms-2"  type="submit" class="nir-btn" id="submit2"  name="submit" >Souscrire</button>
                             </form>
                         </div>
                     </div>
@@ -558,16 +554,15 @@ Grâce à nos expériences cumulées et à la diversité de notre équipe, nous 
     <script src="js/custom-swiper.js"></script>
     <script src="../www.google.com/recaptcha/api.js" async defer></script>
     <script src="js/custom-nav.js"></script>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
     (function() {
-        emailjs.init("2HNDkOEioK5X1tEzJ"); // Replace with your EmailJS user ID
+        emailjs.init("Rlo9fNQYf6fjDysZP"); // Replace with your EmailJS user ID
     })();
     </script>
     <script>
         document.getElementById('submit2').addEventListener('click', function(event) {
             event.preventDefault(); // Prevent the form from submitting the traditional way
-            
             // Collect form data
             const nom = document.getElementsByName('nom')[0].value;
             const prenom = document.getElementsByName('prenom')[0].value;
@@ -577,9 +572,8 @@ Grâce à nos expériences cumulées et à la diversité de notre équipe, nous 
             const mois = document.getElementsByName('mois')[0].value;
             const chambre = document.getElementsByName('chambre')[0].value;
             const adulte = document.getElementsByName('adulte')[0].value;
-    
-            // Send email via EmailJS
-            emailjs.send('service_44sddif', 'template_kb3o0fn', {
+
+                  emailjs.send('service_j6o7ul9', 'template_29i9fba', {
                 nom: nom,
                 prenom: prenom,
                 email: email,
@@ -595,6 +589,7 @@ Grâce à nos expériences cumulées et à la diversité de notre équipe, nous 
                 console.log('FAILED...', error);
                 alert('Erreur lors de l\'envoi. Veuillez réessayer.');
             });
+          
         });
     </script>
 
