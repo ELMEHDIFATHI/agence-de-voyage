@@ -597,10 +597,15 @@ Grâce à nos expériences cumulées et à la diversité de notre équipe, nous 
             event.preventDefault(); // Prevent the form from submitting the traditional way
             // Collect form data
             const email = document.getElementsByName('email')[0].value;
-
-
                 emailjs.send('service_j6o7ul9', 'template_29i9fba', {
+                    nom: nom,
+                prenom: prenom,
                 email: email,
+                phone: phone,
+                pays: pays,
+                mois: mois,
+                chambre: chambre,
+                adulte: adulte
             
             }).then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
