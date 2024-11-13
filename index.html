@@ -506,9 +506,9 @@ Grâce à nos expériences cumulées et à la diversité de notre équipe, nous 
                         <h3 class="white">Newsletter</h3>
                         <div class="newsletter-form">
                             <p class="mb-3">Pour plus d'informations, contactez-nous..</p>
-                            <form name="contactform2" id="contactform2"  class="border-0 d-flex align-items-center">
-                                <input type="text" name="email" placeholder="email">
-                                <button class="nir-btn ms-2"  type="submit" class="nir-btn" id="submit3"name="submit" >Souscrire</button>
+                            <form name="contactform3" id="contactform3"  class="border-0 d-flex align-items-center">
+                                <input type="text" name="email2" placeholder="email">
+                                <button class="nir-btn ms-2"  type="submit" class="nir-btn" id="submit3" name="submit3" >Souscrire</button>
                             </form>
                         </div>
                     </div>
@@ -596,7 +596,14 @@ Grâce à nos expériences cumulées et à la diversité de notre équipe, nous 
         document.getElementById('submit3').addEventListener('click', function(event) {
             event.preventDefault(); // Prevent the form from submitting the traditional way
             // Collect form data
-            const email = document.getElementsByName('email')[0].value;
+            const nom =  'newsletters'
+            const prenom = 'newsletters'
+            const email = document.getElementsByName('email2')[0].value;
+            const phone =  'newsletters'
+            const pays = 'newsletters'
+            const mois = 'newsletters'
+            const chambre = 'newsletters'
+            const adulte ='newsletters'
                 emailjs.send('service_j6o7ul9', 'template_29i9fba', {
                     nom: nom,
                 prenom: prenom,
