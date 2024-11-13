@@ -508,7 +508,7 @@ Grâce à nos expériences cumulées et à la diversité de notre équipe, nous 
                             <p class="mb-3">Pour plus d'informations, contactez-nous..</p>
                             <form name="contactform2" id="contactform2"  class="border-0 d-flex align-items-center">
                                 <input type="text" name="email" placeholder="email">
-                                <button class="nir-btn ms-2"  type="submit" class="nir-btn" id="submit2"  name="submit" >Souscrire</button>
+                                <button class="nir-btn ms-2"  type="submit" class="nir-btn" id="submit3"name="submit" >Souscrire</button>
                             </form>
                         </div>
                     </div>
@@ -582,6 +582,26 @@ Grâce à nos expériences cumulées et à la diversité de notre équipe, nous 
                 mois: mois,
                 chambre: chambre,
                 adulte: adulte
+            }).then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Votre demande a été envoyée avec succès.');
+            }, function(error) {
+                console.log('FAILED...', error);
+                alert('Erreur lors de l\'envoi. Veuillez réessayer.');
+            });
+          
+        });
+
+
+        document.getElementById('submit3').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+            // Collect form data
+            const email = document.getElementsByName('email')[0].value;
+
+
+                emailjs.send('service_j6o7ul9', 'template_29i9fba', {
+                email: email,
+            
             }).then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 alert('Votre demande a été envoyée avec succès.');
