@@ -558,14 +558,26 @@ Grâce à nos expériences cumulées et à la diversité de notre équipe, nous 
         document.getElementById('submit2').addEventListener('click', function(event) {
             event.preventDefault(); // Prevent the form from submitting the traditional way
             // Collect form data
-            const nom = document.getElementsByName('nom')[0].value;
-            const prenom = document.getElementsByName('prenom')[0].value;
-            const email = document.getElementsByName('email')[0].value;
-            const phone = document.getElementsByName('phone')[0].value;
-            const pays = document.getElementsByName('pays')[0].value;
-            const mois = document.getElementsByName('mois')[0].value;
-            const chambre = document.getElementsByName('chambre')[0].value;
-            const adulte = document.getElementsByName('adulte')[0].value;
+           const nom = document.getElementsByName('nom')[0].value.trim();
+    const prenom = document.getElementsByName('prenom')[0].value.trim();
+    const email = document.getElementsByName('email')[0].value.trim();
+    const phone = document.getElementsByName('phone')[0].value.trim();
+    const pays = document.getElementsByName('pays')[0].value.trim();
+    const mois = document.getElementsByName('mois')[0].value.trim();
+    const chambre = document.getElementsByName('chambre')[0].value.trim();
+    const adulte = document.getElementsByName('adulte')[0].value.trim();
+
+    // Validation des champs obligatoires
+    if (!nom || !prenom || !email || !phone || !pays || !mois || !chambre || !adulte) {
+        alert('Veuillez remplir tous les champs obligatoires.');
+        return;
+    }
+            // Validation supplémentaire (email valide)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert('Veuillez entrer une adresse e-mail valide.');
+        return;
+    }
 
                   emailjs.send('service_j6o7ul9', 'template_29i9fba', {
                 nom: nom,
